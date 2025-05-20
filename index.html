@@ -1,12 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+    <title>RWColoc</title>
+  </head>
+  <body>
+    <header class="text-[17px]">
+      <nav
+        class="fixed bg-zinc-100 flex justify-around w-full top-0 left-0 p-8 gap-20"
+      >
+        <div class="text-blue-950 font-bold text-xl">😊RWColoc</div>
+        <div>
+          <ol class="flex gap-6 text-blue-900">
+            <li class="hover:text-blue-600 transition duration-200">
+              <a href="">Comment ça marche ?</a>
+            </li>
+            <li class="hover:text-blue-600 transition duration-200">
+              <a href="">Pour qui</a>
+            </li>
+            <li class="hover:text-blue-600 transition duration-200">
+              <a href="">Services</a>
+            </li>
+            <li class="hover:text-blue-600 transition duration-200">
+              <a href="">Témoignages</a>
+            </li>
+          </ol>
+        </div>
+        <div>
+          <a
+            href=""
+            class="bg-blue-950 text-white px-3 py-2 rounded-lg hover:bg-blue-800 transiton duration-200"
+          >
+            <button>Espace Pro</button>
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <section
+      id="hero"
+      class="bg-blue-950 mt-23 text-white flex items-center justify-center px-30"
+    >
+      <div>
+        <h1 class="text-5xl font-bold mb-7">
+          Des colocations sans conflits grace à l'IA
+        </h1>
+        <p class="text-2xl font-serif mb-7">
+          Trouvez des colocataires compatibles et gérez votre quotidien avec des
+          outils intelligents.
+        </p>
+        <div class="flex gap-5">
+          <a
+            href="#"
+            class="bg-green-900 text-white px-4 py-3 rounded-lg hover:bg-blue-800 transition duration-200 text-2xl font-serif inline-flex items-center gap-2"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"
+              />
+            </svg>
+            Télécharger l'app
+          </a>
+
+          <a
+            href="#"
+            class="border-2 border-white text-white px-4 py-3 rounded-lg hover:bg-blue-800 transition duration-200 text-2xl font-serif inline-flex items-center gap-2"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+              />
+            </svg>
+            En savoir plus
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <img src="./assets/telephone.png" alt="" />
+      </div>
+    </section>
+  </body>
 </html>
