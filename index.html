@@ -8,12 +8,17 @@
   </head>
   <body>
     <header class="text-[17px]">
-      <nav
-        class="fixed top-0 left-0 flex justify-around w-full gap-20 p-8 bg-zinc-100"
-      >
+      <nav class="fixed top-0 left-0 flex flex-wrap justify-between w-full p-4 md:p-8 bg-zinc-100 md:justify-around md:gap-20">
         <div class="text-xl font-bold text-blue-950">😊RWColoc</div>
-        <div>
-          <ol class="flex gap-6 text-blue-900">
+        
+        <button id="menu-toggle" class="block md:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-16 6h16"></path>
+          </svg>
+        </button>
+
+        <div id="mobile-menu" class="hidden w-full md:flex md:w-auto">
+          <ol class="flex flex-col w-full gap-4 mt-4 text-blue-900 md:flex-row md:mt-0 md:gap-6">
             <li class="transition duration-200 hover:text-blue-600">
               <a href="#commentcamarche">Comment ça marche ?</a>
             </li>
@@ -28,11 +33,9 @@
             </li>
           </ol>
         </div>
-        <div>
-          <a
-            href=""
-            class="px-3 py-2 text-white duration-200 rounded-lg bg-blue-950 hover:bg-blue-800 transiton"
-          >
+
+        <div class="hidden md:block">
+          <a href="" class="px-3 py-2 text-white duration-200 rounded-lg bg-blue-950 hover:bg-blue-800 transiton">
             <button>Espace Pro</button>
           </a>
         </div>
@@ -41,20 +44,20 @@
 
     <section
       id="hero"
-      class="flex items-center justify-center text-white bg-blue-950 mt-23 px-30 mb-15"
+      class="flex flex-col items-center justify-center px-4 text-white bg-blue-950 mt-23 md:flex-row md:px-30 mb-15"
     >
-      <div>
-        <h1 class="text-5xl font-bold mb-7">
+      <div class="max-w-xl p-4 text-center md:text-left">
+        <h1 class="text-3xl font-bold mb-7 md:text-5xl">
           Des colocations sans conflits grace à l'IA
         </h1>
-        <p class="font-serif text-2xl mb-7">
+        <p class="font-serif text-xl mb-7 md:text-2xl">
           Trouvez des colocataires compatibles et gérez votre quotidien avec des
           outils intelligents.
         </p>
-        <div class="flex gap-5">
+        <div class="flex flex-col gap-4 md:flex-row md:gap-5">
           <a
             href="#"
-            class="inline-flex items-center gap-2 px-4 py-3 font-serif text-2xl text-white transition duration-200 bg-green-900 rounded-lg hover:scale-105 hover:bg-green-950"
+            class="inline-flex items-center justify-center gap-2 px-4 py-3 font-serif text-xl text-white transition duration-200 bg-green-900 rounded-lg md:text-2xl hover:scale-105 hover:bg-green-950"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -75,7 +78,7 @@
 
           <a
             href="#"
-            class="inline-flex items-center gap-2 px-4 py-3 font-serif text-2xl text-white transition duration-200 border-2 border-white rounded-lg hover:scale-105 hover:bg-slate-800"
+            class="inline-flex items-center justify-center gap-2 px-4 py-3 font-serif text-xl text-white transition duration-200 border-2 border-white rounded-lg md:text-2xl hover:scale-105 hover:bg-slate-800"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -96,22 +99,22 @@
         </div>
       </div>
 
-      <div>
-        <img src="./assets/telephone.png" alt="" />
+      <div class="w-full max-w-md mt-8 md:mt-0">
+        <img src="./assets/telephone.png" alt="" class="w-full h-auto" />
       </div>
     </section>
 
     <section
       id="galere"
-      class="flex flex-col items-center justify-center gap-5 mb-15"
+      class="flex flex-col items-center justify-center gap-5 px-4 mb-15"
     >
-      <h1 class="text-4xl font-bold text-blue-950 mb-15">
+      <h1 class="text-3xl font-bold text-center text-blue-950 mb-15 md:text-4xl">
         Finis les galères de colocation
       </h1>
-      <div class="flex gap-7">
+      <div class="flex flex-col gap-7 md:flex-row">
         <!-- carte#1 -->
         <div
-          class="max-w-md mx-auto overflow-hidden transition-transform duration-300 border border-gray-100 shadow-md rounded-xl hover:scale-105"
+          class="w-full max-w-md mx-auto overflow-hidden transition-transform duration-300 border border-gray-100 shadow-md rounded-xl hover:scale-105"
         >
           <div class="flex items-center justify-center h-24 bg-blue-50">
             <span class="text-5xl">🧹</span>
@@ -139,7 +142,7 @@
 
         <!-- carte#2 -->
         <div
-          class="max-w-md mx-auto overflow-hidden transition-transform duration-300 border border-gray-100 shadow-md rounded-xl hover:scale-105"
+          class="w-full max-w-md mx-auto overflow-hidden transition-transform duration-300 border border-gray-100 shadow-md rounded-xl hover:scale-105"
         >
           <div class="flex items-center justify-center h-24 bg-blue-50">
             <span class="text-5xl">💬</span>
@@ -165,7 +168,7 @@
 
         <!-- carte#3 -->
         <div
-          class="max-w-md mx-auto overflow-hidden transition-transform duration-300 border border-gray-100 shadow-md rounded-xl hover:scale-105"
+          class="w-full max-w-md mx-auto overflow-hidden transition-transform duration-300 border border-gray-100 shadow-md rounded-xl hover:scale-105"
         >
           <div class="flex items-center justify-center h-24 bg-blue-50">
             <span class="text-5xl">🎲</span>
@@ -193,20 +196,20 @@
       </div>
     </section>
 
-    <section id="commentcamarche" class="px-6 py-12 bg-gray-50 mb-15">
+    <section id="commentcamarche" class="px-4 py-12 bg-gray-50 mb-15 md:px-6">
       <div class="max-w-2xl mx-auto">
-        <h2 class="mb-12 text-4xl font-bold text-center text-blue-950">
+        <h2 class="mb-12 text-3xl font-bold text-center text-blue-950 md:text-4xl">
           Comment ça marche ?
         </h2>
 
         <!-- 1er élément -->
-        <div class="flex items-start gap-6 mb-10">
+        <div class="flex flex-col items-center gap-6 mb-10 text-center md:flex-row md:items-start md:text-left">
           <div class="p-4 bg-blue-100 rounded-full shadow-lg">
             <span class="text-3xl">👤</span>
           </div>
 
           <div>
-            <h3 class="mb-1 text-2xl font-semibold text-gray-800">
+            <h3 class="mb-1 text-xl font-semibold text-gray-800 md:text-2xl">
               Créez votre profil
             </h3>
             <p class="text-gray-600">
@@ -218,13 +221,13 @@
         </div>
 
         <!-- 2em élément -->
-        <div class="flex items-start gap-6 mb-10">
+        <div class="flex flex-col items-center gap-6 mb-10 text-center md:flex-row md:items-start md:text-left">
           <div class="p-4 bg-blue-100 rounded-full shadow-lg">
             <span class="text-3xl">❤️</span>
           </div>
 
           <div>
-            <h3 class="mb-1 text-2xl font-semibold text-gray-800">
+            <h3 class="mb-1 text-xl font-semibold text-gray-800 md:text-2xl">
               Recevez des matches
             </h3>
             <p class="text-gray-600">
@@ -235,14 +238,14 @@
           </div>
         </div>
 
-        <!-- 2em élément -->
-        <div class="flex items-start gap-6">
+        <!-- 3em élément -->
+        <div class="flex flex-col items-center gap-6 text-center md:flex-row md:items-start md:text-left">
           <div class="p-4 bg-blue-100 rounded-full shadow-lg">
             <span class="text-3xl">💬</span>
           </div>
 
           <div>
-            <h3 class="mb-1 text-2xl font-semibold text-gray-800">
+            <h3 class="mb-1 text-xl font-semibold text-gray-800 md:text-2xl">
               Gérez votre colocation
             </h3>
             <p class="text-gray-600">
@@ -255,16 +258,14 @@
       </div>
     </section>
 
-    <section id="pourqui" class="flex flex-col py-10 mb-15">
-      <div class="text-4xl font-bold text-center text-blue-950 mb-15">
+    <section id="pourqui" class="flex flex-col px-4 py-10 mb-15">
+      <div class="text-3xl font-bold text-center text-blue-950 mb-15 md:text-4xl">
         <h2>Roomatch, pour qui ?</h2>
       </div>
 
-      <div class="flex items-center justify-center gap-8">
+      <div class="flex flex-col items-center justify-center gap-8 md:flex-row">
         <!-- carte #1 -->
-        <div
-          class="overflow-hidden transition-transform duration-300 border border-gray-100 shadow-md w-lg rounded-xl hover:scale-105"
-        >
+        <div class="w-full overflow-hidden transition-transform duration-300 border border-gray-100 shadow-md md:w-lg rounded-xl hover:scale-105">
           <div class="flex items-center justify-center bg-blue-50 h-45">
             <span class="text-7xl">🎓</span>
           </div>
@@ -336,9 +337,7 @@
         </div>
 
         <!-- carte #2 -->
-        <div
-          class="overflow-hidden transition-transform duration-300 border border-gray-100 shadow-md w-lg rounded-xl hover:scale-105"
-        >
+        <div class="w-full overflow-hidden transition-transform duration-300 border border-gray-100 shadow-md md:w-lg rounded-xl hover:scale-105">
           <div class="flex items-center justify-center bg-blue-50 h-45">
             <span class="text-7xl">💼</span>
           </div>
@@ -409,10 +408,8 @@
           </div>
         </div>
 
-        <!-- carte #2 -->
-        <div
-          class="overflow-hidden transition-transform duration-300 border border-gray-100 shadow-md w-lg rounded-xl hover:scale-105"
-        >
+        <!-- carte #3 -->
+        <div class="w-full overflow-hidden transition-transform duration-300 border border-gray-100 shadow-md md:w-lg rounded-xl hover:scale-105">
           <div class="flex items-center justify-center bg-blue-50 h-45">
             <span class="text-7xl">🌱</span>
           </div>
@@ -653,9 +650,9 @@
       </div>
     </section>
 
-    <section id="services" class="mx-auto max-w-[1400px] py-15 mb-15">
+    <section id="services" class="mx-auto max-w-[1400px] py-15 px-4 mb-15">
       <div class="max-w-xl mx-auto mb-20 text-center">
-        <h2 class="mb-5 text-4xl font-bold text-blue-950">
+        <h2 class="mb-5 text-3xl font-bold text-blue-950 md:text-4xl">
           Votre coloc clé en main ✨
         </h2>
         <p class="text-gray-600">
@@ -664,121 +661,91 @@
         </p>
       </div>
 
-      <div class="grid grid-cols-2 gap-8">
+      <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
         <!-- #1  --> 
-        <div class="flex items-center gap-4 p-8 transition-transform duration-200 bg-white shadow-md rounded-2xl hover:scale-105">
-          <div
-            class="flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full"
-          >
+        <div class="flex flex-col items-center gap-4 p-8 transition-transform duration-200 bg-white shadow-md md:flex-row rounded-2xl hover:scale-105">
+          <div class="flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full">
             <p class="text-4xl">🛡️</p>
           </div>
-          <div class="max-w-md">
+          <div class="max-w-md text-center md:text-left">
             <h2 class="mb-2 text-2xl font-semibold text-blue-950">
               Assurance Habitation
-              <span
-                class="px-2 py-[2px] ml-2 text-sm font-thin bg-gray-200 rounded-full"
-                >Luko</span
-              >
+              <span class="px-2 py-[2px] ml-2 text-sm font-thin bg-gray-200 rounded-full">Luko</span>
             </h2>
             <p class="mb-4">
               Une assurance adaptée aux colocations avec une réduction exclusive
               de 20% la première année.
             </p>
             <span class="px-2 py-1 bg-blue-200 rounded-sm">
-              -20% sur la 1ère année</span
-            >
+              -20% sur la 1ère année</span>
           </div>
         </div>
 
         <!-- #2  -->
-        <div class="flex items-center gap-4 p-8 transition-transform duration-200 bg-white shadow-md rounded-2xl hover:scale-105">
-          <div
-            class="flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full"
-          >
+        <div class="flex flex-col items-center gap-4 p-8 transition-transform duration-200 bg-white shadow-md md:flex-row rounded-2xl hover:scale-105">
+          <div class="flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full">
             <p class="text-4xl">🌐</p>
           </div>
-          <div class="max-w-md">
+          <div class="max-w-md text-center md:text-left">
             <h2 class="mb-2 text-2xl font-semibold text-blue-950">
               Internet Fibre
-              <span
-                class="px-2 py-[2px] ml-2 text-sm font-thin bg-gray-200 rounded-full"
-                >Orange</span
-              >
+              <span class="px-2 py-[2px] ml-2 text-sm font-thin bg-gray-200 rounded-full">Orange</span>
             </h2>
             <p class="mb-4">
               Offre spéciale colocation avec facturation partagée et
               installation prioritaire.
             </p>
-            <span class="px-2 py-1 bg-blue-200 rounded-sm"
-              >30€/mois partagés</span
-            >
+            <span class="px-2 py-1 bg-blue-200 rounded-sm">30€/mois partagés</span>
           </div>
         </div>
 
         <!-- #3  -->
-        <div class="flex items-center gap-4 p-8 transition-transform duration-200 bg-white shadow-md rounded-2xl hover:scale-105">
-          <div
-            class="flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full"
-          >
+        <div class="flex flex-col items-center gap-4 p-8 transition-transform duration-200 bg-white shadow-md md:flex-row rounded-2xl hover:scale-105">
+          <div class="flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full">
             <p class="text-4xl">🤝</p>
           </div>
-          <div class="max-w-md">
+          <div class="max-w-md text-center md:text-left">
             <h2 class="mb-2 text-2xl font-semibold text-blue-950">
-              Médiation<span
-                class="px-2 py-[2px] ml-2 text-sm font-thin bg-gray-200 rounded-full"
-                >Médiateurs de France</span
-              >
+              Médiation
+              <span class="px-2 py-[2px] ml-2 text-sm font-thin bg-gray-200 rounded-full">Médiateurs de France</span>
             </h2>
             <p class="mb-4">
               En cas de conflit majeur, bénéficiez d'une session de médiation
               professionnelle gratuite.
             </p>
-            <span class="px-2 py-1 bg-blue-200 rounded-sm"
-              >1ère session gratuite</span
-            >
+            <span class="px-2 py-1 bg-blue-200 rounded-sm">1ère session gratuite</span>
           </div>
         </div>
 
         <!-- #4 -->
-        <div class="flex items-center gap-4 p-8 transition-transform duration-200 bg-white shadow-md rounded-2xl hover:scale-105">
-          <div
-            class="flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full"
-          >
+        <div class="flex flex-col items-center gap-4 p-8 transition-transform duration-200 bg-white shadow-md md:flex-row rounded-2xl hover:scale-105">
+          <div class="flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full">
             <p class="text-4xl">🧹</p>
           </div>
-          <div class="max-w-md">
+          <div class="max-w-md text-center md:text-left">
             <h2 class="mb-2 text-2xl font-semibold text-blue-950">
               Ménage
-              <span
-                class="px-2 py-[2px] ml-2 text-sm font-thin bg-gray-200 rounded-full"
-                >Clean&Green</span
-              >
+              <span class="px-2 py-[2px] ml-2 text-sm font-thin bg-gray-200 rounded-full">Clean&Green</span>
             </h2>
             <p class="mb-4">
               Service de ménage écologique bi-mensuel avec produits respectueux
               de l'environnement.
             </p>
-            <span class="px-2 py-1 bg-blue-200 rounded-sm"
-              >Pack écolo 80€/mois</span
-            >
+            <span class="px-2 py-1 bg-blue-200 rounded-sm">Pack écolo 80€/mois</span>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="temoignages" class="bg-gray-50 py-15 pb-30">
-      <div class="text-4xl font-bold text-center text-blue-950 mb-15">
+    <section id="temoignages" class="px-4 bg-gray-50 py-15 pb-30">
+      <div class="text-3xl font-bold text-center text-blue-950 mb-15 md:text-4xl">
         <h2>Ils adorent RWColoc</h2>
       </div>
 
-      <div class="grid max-w-6xl grid-cols-2 gap-6 mx-auto">
-        <div
-          class="flex flex-col gap-6 p-6 transition-transform duration-200 bg-white shadow-lg rounded-2xl hover:scale-105"
-        >
-          <div class="flex items-center gap-6">
-            <div
-              class="flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full"
-            >
+      <div class="grid max-w-6xl grid-cols-1 gap-6 mx-auto md:grid-cols-2">
+        <div class="flex flex-col gap-6 p-6 transition-transform duration-200 bg-white shadow-lg rounded-2xl hover:scale-105">
+          <div class="flex flex-col items-center gap-6 md:flex-row">
+            <div class="flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -792,7 +759,7 @@
                 />
               </svg>
             </div>
-            <div class="flex flex-col">
+            <div class="flex flex-col text-center md:text-left">
               <h2 class="text-xl font-bold">Thomas, 22ans</h2>
               <p class="text-gray-600">Étudiant en médecine</p>
             </div>
@@ -861,7 +828,7 @@
             </svg>
           </div>
 
-          <div class="italic text-gray-700">
+          <div class="italic text-center text-gray-700 md:text-left">
             <p>
               "Avec mes horaires de garde, je craignais de ne pas trouver de
               coloc compatible. Roomatch m'a mis en relation avec deux autres
@@ -871,13 +838,9 @@
           </div>
         </div>
 
-        <div
-          class="flex flex-col gap-6 p-6 transition-transform duration-200 bg-white shadow-lg rounded-2xl hover:scale-105"
-        >
-          <div class="flex items-center gap-6">
-            <div
-              class="flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full"
-            >
+        <div class="flex flex-col gap-6 p-6 transition-transform duration-200 bg-white shadow-lg rounded-2xl hover:scale-105">
+          <div class="flex flex-col items-center gap-6 md:flex-row">
+            <div class="flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -891,7 +854,7 @@
                 />
               </svg>
             </div>
-            <div class="flex flex-col">
+            <div class="flex flex-col text-center md:text-left">
               <h2 class="text-xl font-bold">Martine, 68 ans</h2>
               <p class="text-gray-600">Retraitée</p>
             </div>
@@ -960,7 +923,7 @@
             </svg>
           </div>
 
-          <div class="italic text-gray-700">
+          <div class="italic text-center text-gray-700 md:text-left">
             <p>
               "Après le départ de mon mari, ma maison était devenue trop grande
               et trop silencieuse. Grâce à Roomatch, j'accueille maintenant deux
@@ -973,15 +936,15 @@
       </div>
     </section>
 
-    <section id="fin" class="flex flex-col items-center p-20 bg-blue-950 mb-15">
-      <div class="text-4xl font-bold text-center text-white mb-7">
+    <section id="fin" class="flex flex-col items-center p-8 bg-blue-950 mb-15 md:p-20">
+      <div class="text-3xl font-bold text-center text-white mb-7 md:text-4xl">
         <h2>Prêt·e pour une coloc sans stress ?</h2>
       </div>
 
-      <div class="flex gap-5">
+      <div class="flex flex-col gap-4 md:flex-row md:gap-5">
           <a
             href="#"
-            class="inline-flex items-center gap-2 px-4 py-3 font-serif text-2xl text-white transition duration-200 bg-green-900 rounded-lg hover:scale-105 hover:bg-green-950"
+            class="inline-flex items-center justify-center gap-2 px-4 py-3 font-serif text-xl text-white transition duration-200 bg-green-900 rounded-lg md:text-2xl hover:scale-105 hover:bg-green-950"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -1002,7 +965,7 @@
 
           <a
             href="#"
-            class="inline-flex items-center gap-2 px-4 py-3 font-serif text-2xl text-white transition duration-200 border-2 border-white rounded-lg hover:scale-105 hover:bg-slate-800"
+            class="inline-flex items-center justify-center gap-2 px-4 py-3 font-serif text-xl text-white transition duration-200 border-2 border-white rounded-lg md:text-2xl hover:scale-105 hover:bg-slate-800"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -1021,16 +984,17 @@
             Découvrir
           </a>
         </div>
-      </div>
     </section>
   </body>
 
-  <footer class="flex flex-col gap-3 pb-20 ml-40">
+  <footer class="flex flex-col items-center gap-3 px-4 pb-20 text-center md:items-start md:text-left md:ml-40">
     <h2 class="text-xl font-bold text-blue-950">😊RWColoc</h2>
     <p class="text-gray-700">La colocation intelligente</p>
-    <a href="#top"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
-  <path fill-rule="evenodd" d="M21.53 9.53a.75.75 0 0 1-1.06 0l-4.72-4.72V15a6.75 6.75 0 0 1-13.5 0v-3a.75.75 0 0 1 1.5 0v3a5.25 5.25 0 1 0 10.5 0V4.81L9.53 9.53a.75.75 0 0 1-1.06-1.06l6-6a.75.75 0 0 1 1.06 0l6 6a.75.75 0 0 1 0 1.06Z" clip-rule="evenodd" />
-</svg>
-</a>
+    <a href="#top">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+        <path fill-rule="evenodd" d="M21.53 9.53a.75.75 0 0 1-1.06 0l-4.72-4.72V15a6.75 6.75 0 0 1-13.5 0v-3a.75.75 0 0 1 1.5 0v3a5.25 5.25 0 1 0 10.5 0V4.81L9.53 9.53a.75.75 0 0 1-1.06-1.06l6-6a.75.75 0 0 1 1.06 0l6 6a.75.75 0 0 1 0 1.06Z" clip-rule="evenodd" />
+      </svg>
+    </a>
   </footer>
+  <script src="script.js"></script>
 </html>
